@@ -1,0 +1,26 @@
+.sectionOne{
+    padding-block: 3em;
+    display: flex;
+    flex-direction: column;
+    gap : 3em;
+}
+
+.sectionOne__content--text {
+    font-family: var(--ff-secondary);
+    font-size: var(--fs-h5);
+}
+
+.sectionOne__projects {
+    display: grid;
+    gap : 3em;
+}
+.sectionOne__btn {
+    align-self:center;
+}
+
+@media (min-width:768px) {
+    .sectionOne__projects {
+        grid-template-columns: repeat(2,1fr);
+        gap : 3em;
+    }
+}

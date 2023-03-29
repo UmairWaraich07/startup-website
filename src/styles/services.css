@@ -1,0 +1,82 @@
+/**
+* !section one
+ */
+.sectionOne {
+  padding-block: 2em 3em;
+  font-family: var(--ff-secondary);
+}
+.sectionOne__content {
+  margin-bottom: 2em;
+}
+.sectionOne__content--text {
+  font-family: var(--ff-secondary);
+  font-size: var(--fs-h6);
+}
+/**
+* ! styles for section one cards  
+*/
+.sectionOne__cards {
+  display: grid;
+  gap: 2em;
+}
+
+[class^="sectionOne__cards--"] {
+  display: grid;
+  gap: 1em;
+  justify-items: center;
+  box-shadow: var(--shadow-1);
+  border-radius: 6px;
+  padding: 2em;
+}
+.name {
+  font-size: var(--fs-h6);
+}
+.price {
+  display: flex;
+  gap: 0.5em;
+  justify-items: center;
+  align-items: center;
+}
+.time {
+  color: var(--clr-dark-50);
+}
+.amount {
+  font-size: var(--fs-h1);
+  font-weight: bold;
+}
+.text {
+  font-size: var(--fs-body);
+  color: var(--clr-dark-50);
+  text-align: center;
+}
+.products {
+  margin-block: 1.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.bi-check-lg {
+  color: var(--clr-green-100);
+}
+
+/**
+* ! media queries
+*/
+
+@media (min-width: 768px) {
+  .sectionOne__cards {
+    grid-template-columns: repeat(1, 0.75fr);
+    justify-content: center;
+  }
+}
+@media (min-width: 1024px) {
+  .sectionOne__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1200px) {
+  .sectionOne__cards {
+    grid-template-columns: repeat(3, 1fr);
+    gap : 3em;
+  }
+}
